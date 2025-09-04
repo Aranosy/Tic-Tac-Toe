@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
+body,
+html {
+    min-height: 100%;
+    margin: 0;
+}
+
+:root {
+    --main-background: #f6f7fb;
+}
+
+.container {
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    background-color: var(--main-background);
+    background: black;
+    min-height: 100vh;
+}
+
+.game {
+    position: absolute;
+    width: clamp(500px, 50vw, 800px);
+    height: clamp(500px, 50vw, 800px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    background-color: white;
+}
+
+.square {
+    background-color: black;
+    display: flex;
+    width: 100%;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.square .cross {
+    width: clamp(100px, 10vw, 200px);
+    height: clamp(100px, 10vw, 200px);
+    filter: invert(100%);
+}
+
+.square .circle {
+    width: clamp(150px, 12vw, 250px);
+    height: clamp(150px, 12vw, 250px);
+    filter: invert(100%);
+}
+
+
+footer {
+    color: var(--logo-font-color);
+    background: var(--main-background);
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0;
+    margin-top: auto;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    margin: 10px;
+    background-color: black;
+}
+
+
+.github-logo {
+    filter: invert(100%);
+    display: block;
+    max-width: 40px;
+    max-height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.github-logo:hover {
+    transform: rotate(360deg) scale(1.2);
+}

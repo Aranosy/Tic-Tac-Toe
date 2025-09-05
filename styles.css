@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Roboto:ital,wght@0,100..900;1,100..900&family=Share+Tech&display=swap');
 
 body,
 html {
@@ -24,12 +25,17 @@ main {
 }
 
 .game {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    width: clamp(500px, 50vw, 800px);
-    height: clamp(500px, 50vw, 800px);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.grid {
+    width: clamp(500px, 50vw, 800px);
+    height: clamp(500px, 50vw, 800px);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -58,6 +64,29 @@ main {
     filter: invert(100%);
 }
 
+.dashboard {
+    padding-top: 20px;
+    color: white;
+    display: flex;
+    width: clamp(500px, 50vw, 600px);
+    align-self: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-family: "Michroma", sans-serif;
+}
+
+.tab {
+    display: flex;
+    flex-direction: column;
+}
+
+.score {
+    padding-top: 5px;
+    display: flex;
+    align-self: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
 
 footer {
     color: var(--logo-font-color);

@@ -52,6 +52,42 @@ main {
     align-items: center;
 }
 
+@keyframes popout {
+    from {
+    transform: scale(0);
+    }
+    80% {
+        transform:scale(1.1);
+    }
+    to {
+        transform: scale(1);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 10;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .square .cross {
     width: clamp(100px, 10vw, 200px);
     height: clamp(100px, 10vw, 200px);

@@ -164,6 +164,5 @@ let checkWin = () => {
         return  "tie";
     }
 
-    isCrossFirst = (isCrossFirst) ? false : true;
     return winner;
 };

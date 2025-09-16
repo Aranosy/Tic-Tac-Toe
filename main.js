@@ -155,15 +155,15 @@ let checkWin = () => {
     {
         if ((cross.length === 5) && (circle.length === 4))
         {
-            isCrossFirst =  false;
+            isCrossFirst = (isCrossFirst) ? false : true;
             return "tie";
         }
     }
     else if ((cross.length === 4) && (circle.length === 5)) {
-        isCrossFirst = true;
+        isCrossFirst = (isCrossFirst) ? false : true;
         return  "tie";
     }
 
-    isCrossFirst =  false;
+    isCrossFirst = (isCrossFirst) ? false : true;
     return winner;
 };
